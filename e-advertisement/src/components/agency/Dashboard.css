@@ -1,0 +1,132 @@
+/* Dashboard.css */
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Background Animation */
+.dashboard-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, #f0f2f5, #e0f7fa);
+  background-size: 400% 400%;
+  animation: gradientShift 15s ease infinite;
+  z-index: -1;
+}
+
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Container Styling */
+.dashboard-container {
+  padding: 20px;
+  animation: fadeIn 1s ease-in-out;
+}
+
+/* Header Buttons */
+.header {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: flex-start;
+  margin-bottom: 20px;
+}
+
+.add-data-button {
+  background-color: #1890ff;
+  color: white;
+  border: none;
+  padding: 10px 18px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 6px;
+  transition: background-color 0.3s ease;
+}
+
+.add-data-button:hover {
+  background-color: #40a9ff;
+}
+
+/* Nested List Styles */
+.nested-list {
+  list-style: none;
+  padding-left: 20px;
+}
+
+.nested-list li {
+  margin-bottom: 8px;
+  font-size: 15px;
+}
+
+/* Table */
+.data-table {
+  border-radius: 10px;
+  background-color: white;
+  overflow: hidden;
+}
+
+/* Table Row Hover Animation */
+.ant-table-tbody > tr:hover {
+  background-color: #f5f5f5;
+  transform: scale(1.02);
+  transition: all 0.3s ease;
+}
+
+/* Modal Styling */
+.custom-modal .ant-modal-content {
+  border-radius: 10px;
+}
+
+.custom-modal .ant-modal-header {
+  background-color: #1890ff;
+  color: white;
+}
+
+.custom-modal .ant-modal-footer {
+  border-top: 1px solid #e8e8e8;
+}
+
+/* Inputs and Selects */
+.ant-select,
+.ant-input {
+  margin-bottom: 12px;
+  transition: border-color 0.3s ease;
+}
+
+.ant-select:hover,
+.ant-input:hover {
+  border-color: #40a9ff;
+}
+
+.ant-input:focus,
+.ant-select-focused {
+  border-color: #1890ff;
+}
+
+/* Responsive Layout */
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+  }
+
+  .add-data-button {
+    width: 100%;
+  }
+
+  .dashboard-container {
+    padding: 10px;
+  }
+}
+
+/* Fade Animation */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}

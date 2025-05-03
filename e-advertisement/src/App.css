@@ -1,0 +1,15 @@
+html, body {
+  height: auto;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.container {
+  flex-grow: 1; /* Ensure the container grows to fill space properly */
+}
